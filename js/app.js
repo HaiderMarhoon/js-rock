@@ -14,6 +14,7 @@ const resultDisplayEl = document.querySelector('#result-display');
 const rockBntElement = document.querySelector("#rock")
 const paperBntElement = document.querySelector("#paper")
 const scissorsBntElement = document.querySelector("#scissors")
+const resetBntElement = document.querySelector("#reset")
 
 
 
@@ -57,8 +58,14 @@ function commpare(){
         msg = "Computer win"
     }
 }
+function resetGame(){
+    resultDisplayEl.textContent=""
+    playerChoice = null
+    computerChoice = null
+}
 
 /*----------------------------- Event Listeners -----------------------------*/
 rockBntElement.addEventListener('click',play )
 paperBntElement.addEventListener('click',play )
 scissorsBntElement.addEventListener('click',play )
+resetBntElement.addEventListener('click',resetGame)
