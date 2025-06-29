@@ -10,7 +10,7 @@ The game compares the choices and shows who wins. First to 5 points wins the mat
 
 ## 🚀 Getting Started
 
-👉 **Play it here:** [https://your-deployment-link.com](http://localhost:5500/)
+👉 **Play it here:** [https://haidermarhoon.github.io/js-rock/](https://haidermarhoon.github.io/js-rock/)
 
 👉 **Planning Materials:**
 - [User Stories](./planning/user-stories.md)
