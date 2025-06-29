@@ -18,7 +18,7 @@ const scissorsBntElement = document.querySelector("#scissors")
 
 
 /*-------------------------------- Functions --------------------------------*/
-play();
+// play();
 
 function getComputerChoice(){
     // generate a random choice 0 to 2
@@ -30,10 +30,10 @@ function getComputerChoice(){
 
 
 // initialize game state 
-function play(){
+function play(event){
     computerChoice= getComputerChoice()
-
-
+    playerChoice=event.target.id;
+    commpare()
 
     // after update state , render to html
     render()
@@ -41,10 +41,22 @@ function play(){
 
 // updated our UI/html directly
 function render (){
-    resultDisplayEl.textContent = `Computer chose ${computerChoice}`
+    resultDisplayEl.textContent = `Computer chose ${computerChoice} and the player chose ${playerChoice}. ${msg}`
 
 }
 
+function commpare(){
+
+    if((playerChoice === "rock" &&  computerChoice ==="scissors") || (playerChoice === "papper" && computerChoice ==="rock") || (playerChoice === "scissors" && computerChoice ==="paper")) {
+        msg = "Player Wins"
+    }
+    else if(playerChoice === computerChoice){
+        msg = "Tie"
+    }
+    else {
+        msg = "Computer win"
+    }
+}
 
 /*----------------------------- Event Listeners -----------------------------*/
 rockBntElement.addEventListener('click',play )
