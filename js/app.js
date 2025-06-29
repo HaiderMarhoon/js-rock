@@ -11,6 +11,10 @@ let msg;
 
 /*------------------------ Cached Element References ------------------------*/
 const resultDisplayEl = document.querySelector('#result-display');
+const rockBntElement = document.querySelector("#rock")
+const paperBntElement = document.querySelector("#paper")
+const scissorsBntElement = document.querySelector("#scissors")
+
 
 
 /*-------------------------------- Functions --------------------------------*/
@@ -19,5 +23,3 @@ const resultDisplayEl = document.querySelector('#result-display');
 
 /*----------------------------- Event Listeners -----------------------------*/
 
-
-console.log("is work")
