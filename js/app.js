@@ -32,7 +32,6 @@ function getComputerChoice(){
 // initialize game state 
 function play(){
     computerChoice= getComputerChoice()
-    console.log(computerChoice)
 
 
 
@@ -42,8 +41,12 @@ function play(){
 
 // updated our UI/html directly
 function render (){
+    resultDisplayEl.textContent = `Computer chose ${computerChoice}`
 
 }
 
-/*----------------------------- Event Listeners -----------------------------*/
 
+/*----------------------------- Event Listeners -----------------------------*/
+rockBntElement.addEventListener('click',play )
+paperBntElement.addEventListener('click',play )
+scissorsBntElement.addEventListener('click',play )
